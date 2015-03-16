@@ -58,7 +58,9 @@
     <Compile Include="Service1.Designer.cs">
       <DependentUpon>Service1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sittebillett.cs" />
     <Compile Include="Sortering.cs" />
+    <Compile Include="Ståbillett.cs" />
     <Compile Include="Tribune.cs" />
     <Compile Include="Tribunetest.cs" />
     <Compile Include="Tribunetest2.cs" />
