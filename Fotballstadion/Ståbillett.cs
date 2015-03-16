@@ -10,7 +10,7 @@ namespace Tribune
 
         public class Ståbillett : Billett
         {
-            //test
+            //test test test 
             public Ståbillett(string tribunenavn, double pris)
                 : base(tribunenavn, pris)
             {
