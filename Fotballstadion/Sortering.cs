@@ -20,6 +20,7 @@ namespace Tribune
                 }
             }
         }
+
         private static void bytt(Object[] tab, int i, int j)
         {
             Object temp = tab[i];

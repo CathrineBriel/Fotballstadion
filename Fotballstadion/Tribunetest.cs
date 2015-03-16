@@ -24,21 +24,30 @@ namespace Tribune
             res += "Kapasitet på felt A: " + feltA.Kapasitet + "\n";
             res += "Kapasitet på felt B: " + feltB.Kapasitet + "\n";
             res += "Kapasitet i kafeen: " + kafeen.Kapasitet + "\n";
-            Ståbillett[] ståbilletter = feltA.KjøpBillett(1, 2);
-            if (ståbilletter != null)
-            {
-                foreach (Ståbillett b in ståbilletter) res += b;
-                res += '\n';
-            }
-            else res += "Ikke nok plass\n";
-            Sittebillett[] sittebilletter = feltB.KjøpBillett(1, 2);
+            
+            
+            Billett[] ståbilletter = feltA.KjøpBillett(1, 2);
+
+                
+                if (ståbilletter != null)
+                {
+                    foreach (Ståbillett b in ståbilletter) res += b;
+                    res += '\n';
+                }
+                else res += "Ikke nok plass\n";
+
+
+            Billett[] sittebilletter = feltB.KjøpBillett(1, 2);
             if (sittebilletter != null)
             {
                 foreach (Sittebillett b in sittebilletter) res += b;
                 res += '\n';
             }
             else res += "Ikke nok plass\n";
-            Sittebillett[] vipbilletter = kafeen.KjøpBillett(1, 2);
+
+            String[] navnVoksne = new string[] { "Ole Olsen", "Kåre Hansen",  };
+            String[] navnBarn = new string[] { "Jan Johansen", "Tore Hansen", "Eskil Dahlen" };
+            Billett[] vipbilletter = kafeen.KjøpBillett(navnVoksne, navnBarn);
             if (vipbilletter != null)
             {
                 foreach (Sittebillett b in vipbilletter) res += b;
